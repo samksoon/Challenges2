@@ -31,3 +31,4 @@
 6. In the Geometry class...
 	public static boolean hasIntersection(Polygon p1, Polygon p2);
 	public static ArrayList<Point2D> getIntersections(Polygon p1, Polygon p2);
+	

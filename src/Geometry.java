@@ -1,9 +1,8 @@
 
 public class Geometry {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static double distance(Point2D first, Point2D second)
+	{
+		return 0.0;
 	}
-
 }
