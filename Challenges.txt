@@ -1,0 +1,33 @@
+1. Make a new class Point2D which represents a 2-dimensional point with double coordinates (x, y).
+   Implement toString(), getX(), getY(), setX(value), setY(value).
+   Make sure that all members are private or protected.
+   
+2. Make a new class Geometry with the following public static methods:
+	double distance(Point2D p1, Point2D p2)  -> returns the distance between them
+	Point2D midpoint(Point2D p1, Point2D p2)  -> returns the midpoint of the two points
+	
+3. Make a new class LineSegment which stores two points as private members and gives
+	accessors (get, set) to them.
+   The LineSegment class should support a length() method which returns how long it is,
+   a midpoint() method which returns its own midpoint (and you should use the Geometry util.
+   function to do this), and a slope() method which calculates the slope and does NOT
+   throw an exception if the line is vertical, instead returning a very large positive number.
+   
+4. Implement Geometry.intersect(LineSegment line1, LineSegment line2) which returns a Point2D
+	at the intersection of the two line segments, or null if they don't intersect.
+
+5. Create a Polygon class which stores an ArrayList of Point2D objects
+	The polygon is interpreted as being a connect-the-dots from the 0th to the 1st to the
+	2nd and so forth of the points in the array
+	We also assume that the last point is connected to the first, so it goes in a loop.
+	Implement the following methods:
+		Point2D getPoint(int index)
+		void setPoint(int index, Point2D point);
+		LineSegment getLineSegment(int startingAtIndex);  // gets segment from index to (index+1)
+		double getPerimeter();
+		void translate(Point2D shift);  // adds shift.getX() to all x coords, shift.getY() to
+										// all the Y coords of the polygon
+		
+6. In the Geometry class...
+	public static boolean hasIntersection(Polygon p1, Polygon p2);
+	public static ArrayList<Point2D> getIntersections(Polygon p1, Polygon p2);
