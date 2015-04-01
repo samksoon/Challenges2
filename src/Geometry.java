@@ -9,4 +9,9 @@ public class Geometry {
 		);
 	}
 	
+	public static String Midpoint(Point2D first, Point2D second){
+		
+		return ((first.getX()/2 + second.getX()/2)) + ", " + ((first.getY()/2 + second.getY()/2));
+	}
+	
 }

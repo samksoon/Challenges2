@@ -9,6 +9,7 @@ public class TestMain {
 		blah.setX(15);
 		blah.setY(10);
 		System.out.println(blah);
+		System.out.println(Geometry.Midpoint(blah, other));
 		
 
 	}
